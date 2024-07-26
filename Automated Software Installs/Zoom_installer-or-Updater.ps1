@@ -65,7 +65,7 @@ if ((Test-Path "C:\temp_zoom\") -eq $true){
 	rm C:\temp_zoom -Recurse
 }
 
-$req = Invoke-WebRequest -uri "https://www.deepfreeze.com/Cloud/pr/softwareupdater/Latest" -UseBasicParsing
+$req = Invoke-WebRequest -uri "https://www.deepfreeze.com/Cloud/pr/softwareupdater/Latest" -UseBasicParsing (this may need to be updated as it is calling on an unrelated site)
 $req_content = $req.RawContent
 $key = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Zoom*"
 if ((Test-Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Zoom*") -eq "$null"){
